@@ -87,7 +87,7 @@ import "@fontsource/fredoka-one";
         </div>
         <div
             id="arrowDown"
-            class="text-center mt-12 animate-fade-in animate-delay-1000 animate-duration-800"
+            class="text-center mt-8 animate-fade-in animate-delay-1000 animate-duration-800"
         >
             <ArrowDown />
         </div>
@@ -103,10 +103,10 @@ import "@fontsource/fredoka-one";
 <script>
     window.onscroll = function () {
         var div = document.getElementById("arrowDown");
-        if (window.scrollY > 50) {
-            div.style.display = "none";
+        if (window.scrollY > 70) {
+            div?.classList.add("animate-fade-out");
         } else {
-            div.style.display = "block";
+            div?.classList.remove("animate-fade-out");
         }
     };
 </script>
