@@ -1,15 +1,15 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/onest';
-import Noise from '../components/Noise.astro';
-import Footer from '../components/Footer.astro';
+import "@fontsource-variable/onest";
+import Noise from "../components/Noise.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
-
 ---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
 	<head>
@@ -21,14 +21,27 @@ const { title } = Astro.props;
 		<title>Portfolio Sergi</title>
 	</head>
 	<body class="bg-gradient-to-tl from-blue-950 via-stone-700 to-gray-900">
-		<Noise/>
+		<Noise />
 		<slot />
-		<Footer/>
+		<Footer />
 	</body>
 </html>
 
 <style>
+	body::-webkit-scrollbar {
+		width: 10px; /* width of the entire scrollbar */
+	}
+
+	body::-webkit-scrollbar-track {
+		background: #555452; /* color of the tracking area */
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background-color: #0000006c; /* color of the scroll thumb */
+		border-radius: 20px; /* roundness of the scroll thumb */
+		
+	}
 	body {
-	font-family: 'Onest Variable', sans-serif;
+		font-family: "Onest Variable", sans-serif;
 	}
 </style>
