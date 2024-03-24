@@ -2,6 +2,7 @@
 // Supports weights 100-900
 import '@fontsource-variable/onest';
 import Noise from '../components/Noise.astro';
+import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
 }
@@ -22,6 +23,7 @@ const { title } = Astro.props;
 	<body class="bg-gradient-to-tl from-blue-950 via-stone-700 to-gray-900">
 		<Noise/>
 		<slot />
+		<Footer/>
 	</body>
 </html>
 
